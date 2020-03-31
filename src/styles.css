@@ -1,0 +1,123 @@
+body {
+  font-family: arial, sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  margin: 0;
+  overflow: hidden;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 10px 1px;
+}
+h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.controls {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #9d9d9d;
+  background-color: #262626;
+  border: #202020 1px solid;
+  border-top-color: #313131;
+  border-left-color: #313131;
+  padding: 0 10px;
+}
+.controls p {
+  font-size: 12px;
+  text-shadow: 1px 1px #000000;
+}
+
+.controls .button {
+  display: inline-block;
+  background-color: #3e3e3e;
+  background-image: linear-gradient(
+    to bottom,
+    #646464 0%,
+    #3e3e3e 50%,
+    #1f1f1f 100%
+  );
+  border: #161616 1px solid;
+  border-radius: 3px;
+  width: 50px;
+  height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  direction: ltr;
+}
+.controls .button:focus {
+  outline: none;
+}
+.controls .button:active {
+  background-image: none;
+}
+
+.controls .button.play i::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-left: 14px solid #9d9d9d;
+  border-bottom: 7px solid transparent;
+  margin: -7px 0 0 -6px;
+}
+.controls .button.stop i::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-left: 14px solid #9d9d9d;
+  margin: -7px 0 0 -7px;
+}
+.controls .button:active i::before {
+  border-left-color: #888;
+}
+
+.controls .button.edit {
+  width: 51px;
+}
+.controls .button.edit i {
+  border: 2px solid;
+  width: 31px;
+  height: 16px;
+  margin: 6px 1px 6px 1px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  color: #9d9d9d;
+}
+.controls .button.edit i::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  box-shadow: -1px 0, 3px 0, 7px 0, 11px 0, 15px 0, 19px 0;
+}
+.controls .button.edit i::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 7px;
+  left: 4px;
+  top: 0;
+  box-shadow: inset 1px 0, inset -1px 0, -2px 0, 2px 0, 10px 0, 14px 0, 18px 0;
+}
+.controls .button.edit:active i {
+  color: #888;
+}

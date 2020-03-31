@@ -1,0 +1,24 @@
+{
+  "name": "sonant-x-play",
+  "version": "1.0.0",
+  "description": "A tiny and fast player for Sonant-X songs",
+  "scripts": {
+    "build": "./build.sh",
+    "clean": "rimraf build/*",
+    "serve": "node_modules/.bin/browser-sync start -s 'build' -f 'build' --no-open",
+    "pretty": "node_modules/.bin/prettier --write \"src/**/*.js\""
+  },
+  "keywords": [],
+  "author": "karim hernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "uglify-es": "^3.3.9",
+    "uglifycss": "0.0.29"
+  },
+  "dependencies": {
+    "lz-string": "^1.4.4"
+  }
+}
